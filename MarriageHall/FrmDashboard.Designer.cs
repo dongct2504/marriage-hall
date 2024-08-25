@@ -29,11 +29,13 @@ partial class FrmDashboard
     private void InitializeComponent()
     {
         panel1 = new Panel();
+        btnLogout = new Button();
         label1 = new Label();
         btnBooking = new Button();
-        btnManagement = new Button();
-        btnLogout = new Button();
+        btnCustomer = new Button();
         panel2 = new Panel();
+        btnViewBooking = new Button();
+        splitter1 = new Splitter();
         panel3 = new Panel();
         label2 = new Label();
         panel1.SuspendLayout();
@@ -43,12 +45,24 @@ partial class FrmDashboard
         // 
         // panel1
         // 
+        panel1.BackColor = Color.MistyRose;
         panel1.Controls.Add(btnLogout);
         panel1.Controls.Add(label1);
         panel1.Location = new Point(-1, 0);
         panel1.Name = "panel1";
         panel1.Size = new Size(1164, 68);
         panel1.TabIndex = 0;
+        // 
+        // btnLogout
+        // 
+        btnLogout.BackColor = Color.Bisque;
+        btnLogout.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        btnLogout.Location = new Point(991, 9);
+        btnLogout.Name = "btnLogout";
+        btnLogout.Size = new Size(162, 42);
+        btnLogout.TabIndex = 6;
+        btnLogout.Text = "Đăng xuất";
+        btnLogout.UseVisualStyleBackColor = false;
         // 
         // label1
         // 
@@ -72,44 +86,56 @@ partial class FrmDashboard
         btnBooking.UseVisualStyleBackColor = false;
         btnBooking.Click += btnBooking_Click;
         // 
-        // btnManagement
+        // btnCustomer
         // 
-        btnManagement.BackColor = Color.Bisque;
-        btnManagement.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-        btnManagement.Location = new Point(69, 142);
-        btnManagement.Name = "btnManagement";
-        btnManagement.Size = new Size(162, 42);
-        btnManagement.TabIndex = 5;
-        btnManagement.Text = "Quản lý";
-        btnManagement.UseVisualStyleBackColor = false;
-        btnManagement.Click += btnManagement_Click;
-        // 
-        // btnLogout
-        // 
-        btnLogout.BackColor = Color.Bisque;
-        btnLogout.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-        btnLogout.Location = new Point(991, 9);
-        btnLogout.Name = "btnLogout";
-        btnLogout.Size = new Size(162, 42);
-        btnLogout.TabIndex = 6;
-        btnLogout.Text = "Đăng xuất";
-        btnLogout.UseVisualStyleBackColor = false;
+        btnCustomer.BackColor = Color.Bisque;
+        btnCustomer.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        btnCustomer.Location = new Point(69, 247);
+        btnCustomer.Name = "btnCustomer";
+        btnCustomer.Size = new Size(162, 42);
+        btnCustomer.TabIndex = 5;
+        btnCustomer.Text = "Khách hàng";
+        btnCustomer.UseVisualStyleBackColor = false;
+        btnCustomer.Click += btnCustomer_Click;
         // 
         // panel2
         // 
-        panel2.Controls.Add(btnManagement);
+        panel2.BackColor = Color.SeaShell;
+        panel2.Controls.Add(btnViewBooking);
+        panel2.Controls.Add(splitter1);
+        panel2.Controls.Add(btnCustomer);
         panel2.Controls.Add(btnBooking);
         panel2.Location = new Point(-1, 74);
         panel2.Name = "panel2";
-        panel2.Size = new Size(322, 455);
+        panel2.Size = new Size(322, 453);
         panel2.TabIndex = 1;
+        // 
+        // btnViewBooking
+        // 
+        btnViewBooking.BackColor = Color.Bisque;
+        btnViewBooking.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        btnViewBooking.Location = new Point(69, 157);
+        btnViewBooking.Name = "btnViewBooking";
+        btnViewBooking.Size = new Size(162, 42);
+        btnViewBooking.TabIndex = 7;
+        btnViewBooking.Text = "Xem lịch";
+        btnViewBooking.UseVisualStyleBackColor = false;
+        btnViewBooking.Click += btnViewBooking_Click;
+        // 
+        // splitter1
+        // 
+        splitter1.Location = new Point(0, 0);
+        splitter1.Name = "splitter1";
+        splitter1.Size = new Size(4, 453);
+        splitter1.TabIndex = 6;
+        splitter1.TabStop = false;
         // 
         // panel3
         // 
         panel3.Controls.Add(label2);
         panel3.Location = new Point(327, 74);
         panel3.Name = "panel3";
-        panel3.Size = new Size(836, 455);
+        panel3.Size = new Size(836, 453);
         panel3.TabIndex = 2;
         // 
         // label2
@@ -148,8 +174,10 @@ partial class FrmDashboard
     private Label label1;
     private Button btnBooking;
     private Button btnLogout;
-    private Button btnManagement;
+    private Button btnCustomer;
     private Panel panel2;
     private Panel panel3;
     private Label label2;
+    private Splitter splitter1;
+    private Button btnViewBooking;
 }

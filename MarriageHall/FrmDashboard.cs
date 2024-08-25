@@ -1,14 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿namespace MarriageHall;
 
-namespace MarriageHall;
 public partial class FrmDashboard : Form
 {
     public FrmDashboard()
@@ -24,8 +15,19 @@ public partial class FrmDashboard : Form
         Show();
     }
 
-    private void btnManagement_Click(object sender, EventArgs e)
+    private void btnViewBooking_Click(object sender, EventArgs e)
     {
+        FrmViewBooking frmViewBooking = new FrmViewBooking();
+        Hide();
+        frmViewBooking.ShowDialog();
+        Show();
+    }
 
+    private void btnCustomer_Click(object sender, EventArgs e)
+    {
+        FrmCustomer frmCustomer = new FrmCustomer();
+        Hide();
+        frmCustomer.ShowDialog();
+        Show();
     }
 }
