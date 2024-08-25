@@ -5,7 +5,8 @@ namespace MarriageHall.DataAccess.Entities;
 public class Booking
 {
     public int Id { get; set; }
-    public int UserId { get; set; }
+    public int CustomerId { get; set; }
+    public int StaffId { get; set; }
     public int HallId { get; set; }
     public StatusEnum StatusId { get; set; }
     public ShiftEnum ShiftId { get; set; }
