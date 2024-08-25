@@ -3,6 +3,5 @@
 public enum PermissionEnum
 {
     Admin,
-    Staff,
-    Customer
+    Staff
 }
