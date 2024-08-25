@@ -58,9 +58,9 @@ partial class FrmLogin
         label3.Font = new Font("Verdana", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
         label3.Location = new Point(28, 215);
         label3.Name = "label3";
-        label3.Size = new Size(416, 34);
+        label3.Size = new Size(399, 34);
         label3.TabIndex = 4;
-        label3.Text = "Stylish and Profreshional";
+        label3.Text = "Stylish and Professional";
         // 
         // label2
         // 
@@ -140,6 +140,7 @@ partial class FrmLogin
         btnLogin.TabIndex = 3;
         btnLogin.Text = "Đăng nhập";
         btnLogin.UseVisualStyleBackColor = false;
+        btnLogin.Click += btnLogin_Click;
         // 
         // FrmLogin
         // 
